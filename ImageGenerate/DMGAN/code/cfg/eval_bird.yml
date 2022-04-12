@@ -1,0 +1,30 @@
+CONFIG_NAME: 'DMGAN'
+
+DATASET_NAME: 'birds'
+DATA_DIR: './ImageGenerate/DMGAN/data/birds'
+GPU_ID: 0
+WORKERS: 2
+
+B_VALIDATION: False  # True  # False
+TREE:
+    BRANCH_NUM: 3
+
+# /home/lly/HDU2022Note/cxsj/DM-GAN/T2I_CL-main/DM-GAN+CL/output/birds_DMGAN_2022_04_02_01_17_04/Model/
+TRAIN:
+    FLAG: False
+    NET_G: './ImageGenerate/DMGAN/models/netG_epoch_700.pth' #700
+    B_NET_D: False
+    BATCH_SIZE: 1
+    NET_E: './ImageGenerate/DMGAN/DAMSMencoders/bird/text_encoder200.pth'
+
+
+GAN:
+    DF_DIM: 32
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
+    WORDS_NUM: 25

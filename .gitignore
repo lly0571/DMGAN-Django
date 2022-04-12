@@ -1,0 +1,12 @@
+# pytorch model
+*.pt
+*.pth
+# bytecode
+*.pyc
+
+# generated image
+*.jpg
+*.jpeg
+*.png
+
+./ImageGenerate/DMGAN/data/*
